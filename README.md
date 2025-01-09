@@ -33,7 +33,7 @@ Linux Uptime report to Telegram
     
      User=root
     
-     ExecStart=/usr/bin/python /home/user/q.py >/dev/null 2>&1  &
+     ExecStart=/usr/bin/python /home/user/q.py &
 
     
      [Install]
