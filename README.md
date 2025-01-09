@@ -2,11 +2,13 @@ Linux Uptime report to Telegram
 
 1) create telegram BOT
 2) record chat ID
-    chat_id = 1234567890
+
+   chat_id = 1234567890
 4) record BOT ID
-    bot = telepot.Bot('7123456789:AAbbccddee-aaBU3sdfghjkkln-asdfghj')
-5) create file up_time.py\
-6) install:
+
+   bot = telepot.Bot('7123456789:AAbbccddee-aaBU3sdfghjkkln-asdfghj')
+6) create file up_time.py\
+7) install:
    pip
    telepot
    telegram 
