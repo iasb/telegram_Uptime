@@ -31,6 +31,6 @@ Linux Uptime report to Telegram
     systemctl status up_time.service
     
 
-12) 
+12) reboot host or restart service
 
     
