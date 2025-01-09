@@ -7,7 +7,7 @@ Linux Uptime report to Telegram
 4) record BOT ID
 
    bot = telepot.Bot('7123456789:AAbbccddee-aaBU3sdfghjkkln-asdfghj')
-6) create file up_time.py\
+6) create file up_time.py
 7) install:
 
    pip
