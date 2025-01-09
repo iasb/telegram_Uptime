@@ -21,7 +21,6 @@ bot = telepot.Bot('________')
 chat_id = ________
 
 
-
 output = 'test'
 mylist = []
 
@@ -33,8 +32,6 @@ mylist.append(today)
 
 
 out_start = today.strftime('%d/%m/%Y')+' ' + today.strftime('%H:%M')
-
-
 
 
 #print('output ' + output)
