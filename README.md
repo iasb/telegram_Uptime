@@ -46,6 +46,8 @@ Linux Uptime report to Telegram
 
     systemctl enable up_time.service
 
+    systemctl daemon-reload
+    
     systemctl status up_time.service
     
 
