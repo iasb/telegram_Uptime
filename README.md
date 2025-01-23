@@ -53,4 +53,5 @@ Linux Uptime report to Telegram
 
 14) reboot host or restart service
 
+    systemctl start up_time.service
     
