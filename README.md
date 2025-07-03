@@ -1,4 +1,10 @@
 Linux Uptime report to Telegram
+each 10 min in telegram will be refreshesd string:   
+
+rpi4-18:1.18 02/07  10:27  -->   20:19
+Host:IP  script_start --> last (10 min period) time
+
+record older 10 min - deleted and new updated record inserted
 
 1) create telegram BOT
 2) record chat ID
