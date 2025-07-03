@@ -1,0 +1,90 @@
+#!/usr/bin/python
+# coder :- Salman Faris
+# coder iasb
+#
+# shortened output:  
+#- rpi4-18:1.18 02/07  10:27  -->   20:19
+#- hostname:IP(last 2 digits) start time (date time) - last hour:minute of activity
+#
+
+import sys
+import time
+import datetime
+import telepot
+import time, datetime
+import os
+import random
+#import subprocess
+import socket
+
+from telepot.loop import MessageLoop
+from re import findall
+#from subprocess import Popen, PIPE
+#from pythonping import ping
+#from telegram import Update
+#from telegram.ext import Updater, CommandHandler, CallbackContext
+
+def get_ip():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.settimeout(0)
+    try:
+        # doesn't even have to be reachable
+        s.connect(('192.168.1.254', 1))
+        IP = s.getsockname()[0]
+    except Exception:
+        IP = '127.0.0.1'
+    finally:
+        s.close()
+    return IP
+
+now = datetime.datetime.now()
+
+#LED
+bot = telepot.Bot('7XXXX:AAEfXXXXXXXXXXXXXXXXXXXXXXX')
+
+chat_id = 177777777
+
+
+
+output = 'test'
+mylist = []
+#today = datetime.date.today()
+today = datetime.datetime.now()
+
+mylist.append(today)
+#print(mylist[0])
+#print(today)
+
+
+#print('output ' + output)
+
+while 1:
+
+#  output = today.strftime('%d/%m/%Y')
+#  output2 = today.strftime('%H:%M:%S')
+
+
+  today = datetime.datetime.now()
+
+#  output2 = today.strftime('%d/%m ')+' ' + today.strftime('%H:%M')
+  output2 = ' ' + today.strftime('%H:%M')
+
+#  print('output2 ' + output2)
+
+  # Send the output to the chat
+#  im = bot.sendMessage(chat_id, text=out_start+'  -->  '+output+' '+output2)
+
+#  im = bot.sendMessage(chat_id, text='1.18:   '+out_start+'  -->  '+output2)
+
+  im = bot.sendMessage(chat_id, text=' '+out_start+'  -->  '+output2)
+
+  MessID = im['message_id']
+  time.sleep(600)
+  bot.deleteMessage((chat_id,MessID))
+
+
+#out_start = today.strftime('%d/%m ')+' ' + today.strftime('%H:%M')
+
+out_start =  socket.gethostname() + ':' + get_ip()[-4:] + today.strftime(' %d/%m ')+' ' + today.strftime('%H:%M')
+
+#output = today.strftime('%d/%m/%Y')+' ' + today.strftime('%H:%M:%S')
